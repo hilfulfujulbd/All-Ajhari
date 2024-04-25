@@ -21,11 +21,13 @@
         tools:layout="@layout/fragment_chapter">
         <argument
             android:name="BID"
-            android:defaultValue="123"
             app:argType="string" />
         <action
             android:id="@+id/action_chapterFragment_to_webViewFragment"
             app:destination="@id/webViewFragment" />
+        <argument
+            android:name="BNAME"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/webViewFragment"

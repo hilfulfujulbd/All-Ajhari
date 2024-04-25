@@ -2,7 +2,6 @@ package org.hilfulfujul.allajhari
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -14,8 +13,8 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.google.android.gms.ads.MobileAds
 import org.hilfulfujul.allajhari.ads.AdMobHelper
-import org.hilfulfujul.allajhari.ads.AdMobHelper.Companion.TEST_BANNER_AD_UNIT_ID
-import org.hilfulfujul.allajhari.ads.AdMobHelper.Companion.TEST_INTERSTITIAL_AD_UNIT_ID
+import org.hilfulfujul.allajhari.ads.AdMobHelper.Companion.BANNER_AD_UNIT_ID
+import org.hilfulfujul.allajhari.ads.AdMobHelper.Companion.INTERSTITIAL_AD_UNIT_ID
 import org.hilfulfujul.allajhari.databinding.ActivityMainBinding
 import org.hilfulfujul.allajhari.setting.AppUpdateHelper
 import org.hilfulfujul.allajhari.setting.CloseApplication
@@ -131,11 +130,11 @@ class MainActivity : AppCompatActivity() {
                 AdMobHelper.loadBannerAd(
                     applicationContext,
                     binding.mainView.bannerAdsLayout,
-                    bannerAdId ?: TEST_BANNER_AD_UNIT_ID
+                    bannerAdId ?: BANNER_AD_UNIT_ID
                 )
             }
             if (isInterstitialAd) {
-                TEST_INTERSTITIAL_AD_UNIT_ID = interstitialAdId ?: TEST_INTERSTITIAL_AD_UNIT_ID
+                INTERSTITIAL_AD_UNIT_ID = interstitialAdId ?: INTERSTITIAL_AD_UNIT_ID
 
                 if (!AdMobHelper.isLoaded()) {
                     AdMobHelper.loadInterstitialAd(applicationContext)

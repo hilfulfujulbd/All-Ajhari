@@ -11,6 +11,7 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ProgressBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import org.hilfulfujul.allajhari.databinding.FragmentWebViewBinding
@@ -41,6 +42,9 @@ class WebViewFragment : Fragment() {
         } else {
             binding.chapterNonPublished.visibility = View.GONE
         }
+
+        val appCompatActivity = (requireActivity() as AppCompatActivity)
+        appCompatActivity.supportActionBar?.title = args.title
 
         webView = binding.webView
         progressbar = binding.progressCircular

@@ -16,13 +16,13 @@ import org.hilfulfujul.allajhari.setting.CountTimer.SET_TIMEOUT_ADS_ON_AFTER
 
 class AdMobHelper {
     companion object {
-        const val TEST_BANNER_AD_UNIT_ID = "ca-app-pub-3940256099942544/6300978111"
-        var TEST_INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-3940256099942544/1033173712"
+        const val BANNER_AD_UNIT_ID = "ca-app-pub-5980068077636654/2912337209"
+        var INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-5980068077636654/7985372931"
         var mAdView: AdView? = null
 
         // Banner Ad Loading
         fun loadBannerAd(
-            context: Context, adContainer: LinearLayout, adUnitId: String = TEST_BANNER_AD_UNIT_ID
+            context: Context, adContainer: LinearLayout, adUnitId: String = BANNER_AD_UNIT_ID
         ) {
             mAdView = AdView(context)
             mAdView?.setAdSize(AdSize.BANNER)
@@ -38,7 +38,7 @@ class AdMobHelper {
         // Interstitial Ad Loading
         private lateinit var interstitialAd: InterstitialAd
 
-        fun loadInterstitialAd(context: Context, adUnitId: String = TEST_INTERSTITIAL_AD_UNIT_ID) {
+        fun loadInterstitialAd(context: Context, adUnitId: String = INTERSTITIAL_AD_UNIT_ID) {
 
             InterstitialAd.load(context,
                 adUnitId,
@@ -63,11 +63,13 @@ class AdMobHelper {
                 interstitialAd.show(context)
                 interstitialAd.fullScreenContentCallback = object : FullScreenContentCallback() {
                     override fun onAdDismissedFullScreenContent() {
-                        CountTimer.startTimer(SET_TIMEOUT_ADS_ON_AFTER, listener = object : CountTimer.FinishedCount {
-                            override fun onCountFinish() {
-                                loadInterstitialAd(context)
-                            }
-                        })
+                        CountTimer.startTimer(
+                            SET_TIMEOUT_ADS_ON_AFTER,
+                            listener = object : CountTimer.FinishedCount {
+                                override fun onCountFinish() {
+                                    loadInterstitialAd(context)
+                                }
+                            })
                     }
 
                     override fun onAdFailedToShowFullScreenContent(error: AdError) {

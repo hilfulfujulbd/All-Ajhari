@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import org.hilfulfujul.allajhari.R
 import org.hilfulfujul.allajhari.adapters.BooksAdapter
 import org.hilfulfujul.allajhari.databinding.FragmentHomeBinding
 import org.hilfulfujul.allajhari.setting.Response
@@ -38,8 +40,12 @@ class HomeFragment : Fragment() {
         // Initialize the variable
         recyclerView = binding.allBooksRecyclerView
 
+        val appCompatActivity = (requireActivity() as AppCompatActivity)
+        appCompatActivity.supportActionBar?.title = getString(R.string.app_name)
+
         adapter = BooksAdapter { book ->
-            val navDirections = HomeFragmentDirections.actionHomeFragmentToChapterFragment(book.bid)
+            val navDirections =
+                HomeFragmentDirections.actionHomeFragmentToChapterFragment(book.bid, book.name)
             findNavController().navigate(navDirections)
         }
         recyclerView.adapter = adapter
