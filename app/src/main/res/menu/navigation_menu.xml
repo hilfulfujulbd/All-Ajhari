@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/writter"
+            android:icon="@drawable/ic_bookwriter"
+            android:title="@string/writer_info" />
+        <item
+            android:id="@+id/privacy"
+            android:icon="@drawable/ic_privacy"
+            android:title="@string/privacy_policy" />
+        <!--        <item-->
+        <!--            android:id="@+id/update_app"-->
+        <!--            android:icon="@drawable/update_icon"-->
+        <!--            android:title="@string/update_app" />-->
+    </group>
+
+    <item android:title="@string/communication">
+        <menu>
+            <!--            <item-->
+            <!--                android:id="@+id/ratting"-->
+            <!--                android:icon="@drawable/rate_app_icon"-->
+            <!--                android:title="@string/rate_app" />-->
+            <item
+                android:id="@+id/contact_us"
+                android:icon="@drawable/ic_contact_us"
+                android:title="@string/contact_us" />
+            <item
+                android:id="@+id/moreApp"
+                android:icon="@drawable/ic_read_more"
+                android:title="@string/other_apps" />
+            <item
+                android:id="@+id/website"
+                android:icon="@drawable/ic_link_website"
+                android:title="@string/website" />
+            <item
+                android:id="@+id/shair"
+                android:icon="@drawable/ic_shair"
+                android:title="@string/share" />
+        </menu>
+    </item>
+    <item android:title="@string/social_account">
+        <menu>
+            <item
+                android:id="@+id/facebook_page"
+                android:icon="@drawable/facebook_icon"
+                android:title="@string/facebook_page" />
+            <item
+                android:id="@+id/facebook_group"
+                android:icon="@drawable/facebook_icon"
+                android:title="@string/facebook_group" />
+            <item
+                android:id="@+id/youtube"
+                android:icon="@drawable/youtube_icon"
+                android:title="@string/youtube" />
+            <item
+                android:id="@+id/linkedin"
+                android:icon="@drawable/linkedin_icon"
+                android:title="@string/linkedin" />
+        </menu>
+    </item>
+</menu>

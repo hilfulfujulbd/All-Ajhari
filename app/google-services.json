@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "131779595813",
+    "project_id": "all-ajhari",
+    "storage_bucket": "all-ajhari.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131779595813:android:e3f04afea4b15b90e9f9cc",
+        "android_client_info": {
+          "package_name": "org.hilfulfujul.allajhari"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkTEp65IRmc6eeb3J6umoNXFeAzQvy7q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

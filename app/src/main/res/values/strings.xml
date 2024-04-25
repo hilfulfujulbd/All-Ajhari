@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">Ajhari All</string>
+
+    <!--  TODO:: ALL GOOGLE ADS  -->
+    <string name="ads_application_id">ca-app-pub-5980068077636654~6296715302</string>
+    <string name="ads_banner_id">ca-app-pub-5980068077636654/2912337209</string>
+    <string name="ads_interstitial_id">ca-app-pub-5980068077636654/7985372931</string>
+
+    <!--  TODO: Menu Text  -->
+    <string name="home">Home</string>
+    <string name="writer_info">Writer Info</string>
+    <string name="about_app">About app</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="update_app">Update App</string>
+    <string name="other_apps">Other Apps</string>
+    <string name="communication">Communication</string>
+    <string name="rate_app">Rate App</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="website">Website</string>
+    <string name="share">Share</string>
+    <string name="social_account">Social Account</string>
+    <string name="facebook_page">Facebook Page</string>
+    <string name="facebook_group">Facebook Group</string>
+    <string name="youtube">Youtube</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="openNavigation">Open Navigation</string>
+    <string name="closeNavigation">Close Navigation</string>
+    <string name="group_join_demo_text">এই অ্যাপ্সের যেকোন সমস্যায় আমারদের গ্রপে জয়েন করুন, এবং একটি স্কিন শর্ট পোষ্ট করুন। তাছাড়াও আপনি গ্রপে বই থেকে আপনার ভালো লাগা অংশ আমাদের সাথে শিয়ার করতে পারবেন। আর আপনি যদি আগে জয়েন করে থাকেন তাহলে “আমি জয়েন করেছি!” বাটুনে ক্লিক করুন।\nসহযোগিতার জন্য ধন্যবাদ।</string>
+    <string name="todo">TODO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="publisher_info">প্রকাশকের কথা</string>
+    <string name="writer">লেখকের কথা</string>
 </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/writer_info"
+        android:icon="@drawable/ic_read_more"
+        android:title="@string/writer"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/publisher_info"
+        android:title="@string/publisher_info"
+        app:showAsAction="never" />
+
+</menu>
