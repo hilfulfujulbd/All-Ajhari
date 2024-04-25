@@ -30,11 +30,17 @@ class WebViewFragment : Fragment() {
         return binding.root
     }
 
-    @SuppressLint("SetJavaScriptEnabled")
+    @SuppressLint("SetJavaScriptEnabled", "SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val url = args.url
+
+        if (url.isEmpty()) {
+            binding.chapterNonPublished.visibility = View.VISIBLE
+        } else {
+            binding.chapterNonPublished.visibility = View.GONE
+        }
 
         webView = binding.webView
         progressbar = binding.progressCircular

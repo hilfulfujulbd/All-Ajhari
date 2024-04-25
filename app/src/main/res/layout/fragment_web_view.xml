@@ -18,6 +18,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+        <TextView
+            android:id="@+id/chapterNonPublished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:text="@string/info_hilfulfujul_org"
+            android:textSize="18sp"
+            android:textIsSelectable="true"
+            android:visibility="gone" />
+
         <ProgressBar
             android:id="@+id/progress_circular"
             android:layout_width="wrap_content"

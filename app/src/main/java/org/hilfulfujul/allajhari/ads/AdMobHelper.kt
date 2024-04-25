@@ -12,6 +12,7 @@ import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import org.hilfulfujul.allajhari.setting.CountTimer
+import org.hilfulfujul.allajhari.setting.CountTimer.SET_TIMEOUT_ADS_ON_AFTER
 
 class AdMobHelper {
     companion object {
@@ -62,7 +63,7 @@ class AdMobHelper {
                 interstitialAd.show(context)
                 interstitialAd.fullScreenContentCallback = object : FullScreenContentCallback() {
                     override fun onAdDismissedFullScreenContent() {
-                        CountTimer.startTimer(5000, listener = object : CountTimer.FinishedCount {
+                        CountTimer.startTimer(SET_TIMEOUT_ADS_ON_AFTER, listener = object : CountTimer.FinishedCount {
                             override fun onCountFinish() {
                                 loadInterstitialAd(context)
                             }

@@ -80,13 +80,6 @@ class MainActivity : AppCompatActivity() {
         val isInterstitialAd = sharedPreferencesAds.getBoolean(INTERSTITIAL_ADS_KEY)
         val bannerAdId = sharedPreferencesAds.getString(BANNER_ADS_ID)
         val interstitialAdId = sharedPreferencesAds.getString(INTERSTITIAL_ADS_ID)
-        Log.d(
-            "Main Activity", "${isBannerAd}\n" + "${
-                isInterstitialAd
-            }\n" + "${bannerAdId}\n" + "${
-                interstitialAdId
-            }\n"
-        )
 
         drawerLayout = binding.main
 

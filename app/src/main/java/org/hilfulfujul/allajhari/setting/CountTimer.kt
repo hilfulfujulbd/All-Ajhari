@@ -6,6 +6,8 @@ import android.os.CountDownTimer
 object CountTimer {
     private var countDownTimer: CountDownTimer? = null
     private var onFinishListener: FinishedCount? = null
+    var SET_TIMEOUT_ADS_ON_AFTER: Long = 60000
+
     fun startTimer(millisSecond: Long, listener: FinishedCount?) {
         onFinishListener = listener
         if (countDownTimer == null) {

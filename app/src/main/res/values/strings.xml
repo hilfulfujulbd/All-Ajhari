@@ -31,4 +31,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="publisher_info">প্রকাশকের কথা</string>
     <string name="writer">লেখকের কথা</string>
+    <string name="info_hilfulfujul_org">এই অধ্যায়টি এখনো পাবলিশ করা হয়নাই। এই অধ্যায়টি আগামী ৩/৭ দিনের মধ্যে পাবলিশ করা হবে ইনশাআল্লাহ। যদি কোন কারণে না হয় তাহলে info@hilfulfujul.org তে একটি ইমেইল করুন। ধন্যবাদ</string>
 </resources>
