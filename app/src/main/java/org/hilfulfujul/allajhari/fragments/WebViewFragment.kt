@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import org.hilfulfujul.allajhari.databinding.FragmentWebViewBinding
 
+
 class WebViewFragment : Fragment() {
 
     private lateinit var binding: FragmentWebViewBinding
@@ -78,6 +79,12 @@ class WebViewFragment : Fragment() {
         webView.isVerticalScrollBarEnabled = false
 
         webView.webViewClient = myWebViewClient
+
+        /** TEXT COPY FALSE */
+        webView.setOnLongClickListener { true }
+        webView.isLongClickable = false
+        webView.isHapticFeedbackEnabled = false
+
 
         // webView.setBackgroundColor(resources.getColor(R.color.transparent))
         // webView.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null)

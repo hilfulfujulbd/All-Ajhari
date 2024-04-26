@@ -106,18 +106,18 @@ class MainActivity : AppCompatActivity() {
         binding.navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> NavigationActions.navigateToHome(navController, drawerLayout)
-                R.id.writter -> loadUrlInApp("https://hilfulfujul.org/android-apk/all-ajhari/writer-info/")
+                R.id.writter -> loadUrlInApp("https://hilfulfujul.org/android-apk/all-ajhari/writer-info/?ref=All Ajhari Android Application Navigation Bar")
                 R.id.privacy -> loadUrlInApp("https://hilfulfujul.org/android-apk/all-ajhari/privacy-policies/?ref=All Ajhari Android Application Navigation Bar")
                 // R.id.update_app -> AppUpdateHelper.checkForAppUpdate(this)
                 R.id.moreApp -> gotoUrlRedirect("https://play.google.com/store/apps/dev?id=5871408368342725724")
                 // R.id.ratting -> InAppRatting.promptAppRating(this)
-                R.id.contact_us -> return@setNavigationItemSelectedListener false
+                R.id.contact_us -> loadUrlInApp("https://hilfulfujul.org/android-apk/all-ajhari/about-us/?ref=All Ajhari Android Application Navigation Bar")
                 R.id.website -> loadUrlInApp("https://hilfulfujul.org/?ref=All Ajhari Android Application Navigation Bar")
                 R.id.shair -> NavigationActions.shareApp(this)
-                R.id.facebook_page -> gotoUrlRedirect("https://hilfulfujul.org/android-apk/all-ajhari/facebook/")
-                R.id.facebook_group -> gotoUrlRedirect("https://hilfulfujul.org/android-apk/all-ajhari/facebook-group/")
-                R.id.youtube -> gotoUrlRedirect("https://hilfulfujul.org/android-apk/all-ajhari/youtube/")
-                R.id.linkedin -> gotoUrlRedirect("https://hilfulfujul.org/android-apk/all-ajhari/linkedin/")
+                R.id.facebook_page -> loadUrlInApp("https://hilfulfujul.org/android-apk/all-ajhari/facebook/?ref=All Ajhari Android Application Navigation Bar")
+                R.id.facebook_group -> loadUrlInApp("https://hilfulfujul.org/android-apk/all-ajhari/facebook-group/?ref=All Ajhari Android Application Navigation Bar")
+                R.id.youtube -> loadUrlInApp("https://hilfulfujul.org/android-apk/all-ajhari/youtube/?ref=All Ajhari Android Application Navigation Bar")
+                R.id.linkedin -> loadUrlInApp("https://hilfulfujul.org/android-apk/all-ajhari/linkedin/?ref=All Ajhari Android Application Navigation Bar")
             }
 
             drawerLayout.closeDrawers()

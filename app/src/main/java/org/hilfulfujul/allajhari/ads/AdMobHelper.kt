@@ -2,8 +2,10 @@ package org.hilfulfujul.allajhari.ads
 
 import android.app.Activity
 import android.content.Context
+import android.view.View
 import android.widget.LinearLayout
 import com.google.android.gms.ads.AdError
+import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -33,6 +35,18 @@ class AdMobHelper {
 
             val adRequest = AdRequest.Builder().build()
             mAdView?.loadAd(adRequest)
+
+            mAdView?.adListener = object : AdListener() {
+                override fun onAdLoaded() {
+                    super.onAdLoaded()
+                    adContainer.visibility = View.VISIBLE
+                }
+
+                override fun onAdFailedToLoad(loadAdError: LoadAdError) {
+                    super.onAdFailedToLoad(loadAdError)
+                    adContainer.visibility = View.GONE
+                }
+            }
         }
 
         // Interstitial Ad Loading
