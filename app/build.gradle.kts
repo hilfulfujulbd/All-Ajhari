@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
 
     implementation(libs.play.services.ads)
+    implementation(libs.facebook.ads.mediation)
 
     implementation(libs.glide)
 
