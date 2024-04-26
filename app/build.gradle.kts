@@ -64,6 +64,7 @@ dependencies {
 
     implementation(libs.play.services.ads)
     implementation(libs.facebook.ads.mediation)
+    implementation(libs.facebook.infer.annotation)
 
     implementation(libs.glide)
 
