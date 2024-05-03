@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.googleFirebaseService)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.navigationSafeArgs)
+    alias(libs.plugins.googleFirebasePerformance)
 }
 
 android {
@@ -13,8 +14,8 @@ android {
         applicationId = "org.hilfulfujul.allajhari"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
-        versionName = "1.0.1"
+        versionCode = 3
+        versionName = "1.0.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -55,10 +56,12 @@ dependencies {
     implementation(libs.review.ktx)
 
     implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.perf)
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
     implementation(libs.firebase.appcheck)
+    implementation(libs.firebase.messaging)
 
     implementation(libs.androidx.lifecycle.livedata.ktx)
 

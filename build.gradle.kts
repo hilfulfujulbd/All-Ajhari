@@ -1,3 +1,5 @@
+import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.exclude
+
 buildscript {
     dependencies {
         classpath(libs.google.services)
@@ -9,4 +11,5 @@ plugins {
     alias(libs.plugins.googleFirebaseService) apply false
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
     alias(libs.plugins.navigationSafeArgs) apply false
+    alias(libs.plugins.googleFirebasePerformance) apply false
 }
