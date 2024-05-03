@@ -63,4 +63,5 @@
     <color name="md_theme_dark_scrim">#000000</color>
 
     <color name="transparent">#00000000</color>
+    <color name="read_bg_color">#FFFFFF</color>
 </resources>

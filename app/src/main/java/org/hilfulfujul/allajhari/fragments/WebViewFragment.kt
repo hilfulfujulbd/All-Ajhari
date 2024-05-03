@@ -2,6 +2,7 @@ package org.hilfulfujul.allajhari.fragments
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -84,6 +85,8 @@ class WebViewFragment : Fragment() {
         webView.setOnLongClickListener { true }
         webView.isLongClickable = false
         webView.isHapticFeedbackEnabled = false
+
+        webView.setBackgroundColor(Color.TRANSPARENT)
 
 
         // webView.setBackgroundColor(resources.getColor(R.color.transparent))
