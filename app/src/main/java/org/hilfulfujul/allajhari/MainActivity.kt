@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.facebook.ads.AudienceNetworkAds
 import com.google.android.gms.ads.MobileAds
 import org.hilfulfujul.allajhari.ads.AdMobHelper
 import org.hilfulfujul.allajhari.ads.AdMobHelper.Companion.BANNER_AD_UNIT_ID
@@ -54,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         MobileAds.initialize(this) {}
+        AudienceNetworkAds.initialize(this)
 
         askNotificationPermission()
 

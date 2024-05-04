@@ -1,6 +1,7 @@
 [versions]
 agp = "8.4.0"
 appUpdateKtx = "2.1.0"
+audienceNetworkSdk = "6.17.0"
 browser = "1.8.0"
 facebook = "6.17.0.0"
 facebookInferAnnotation = "0.18.0"
@@ -27,6 +28,7 @@ firebasePerformance = "1.4.2"
 androidx-browser = { module = "androidx.browser:browser", version.ref = "browser" }
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 app-update-ktx = { module = "com.google.android.play:app-update-ktx", version.ref = "appUpdateKtx" }
+audience-network-sdk = { module = "com.facebook.android:audience-network-sdk", version.ref = "audienceNetworkSdk" }
 facebook-ads-mediation = { module = "com.google.ads.mediation:facebook", version.ref = "facebook" }
 facebook-infer-annotation = { module = "com.facebook.infer.annotation:infer-annotation", version.ref = "facebookInferAnnotation" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging" }

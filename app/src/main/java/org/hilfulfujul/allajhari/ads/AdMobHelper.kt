@@ -50,33 +50,46 @@ class AdMobHelper {
         }
 
         // Interstitial Ad Loading
-        private lateinit var interstitialAd: InterstitialAd
+        private var mInterstitialAd: InterstitialAd? = null
 
         fun loadInterstitialAd(context: Context, adUnitId: String = INTERSTITIAL_AD_UNIT_ID) {
+            if (!isLoaded()) {
+                InterstitialAd.load(context,
+                    adUnitId,
+                    AdRequest.Builder().build(),
+                    object : InterstitialAdLoadCallback() {
+                        override fun onAdFailedToLoad(adError: LoadAdError) {
+                            mInterstitialAd = null
+                            CountTimer.startTimer(SET_TIMEOUT_ADS_ON_AFTER,
+                                listener = object : CountTimer.FinishedCount {
+                                    override fun onCountFinish() {
+                                        loadInterstitialAd(context)
+                                    }
+                                })
+                        }
 
-            InterstitialAd.load(context,
-                adUnitId,
-                AdRequest.Builder().build(),
-                object : InterstitialAdLoadCallback() {
-                    override fun onAdLoaded(loadedInterstitialAd: InterstitialAd) {
-                        interstitialAd = loadedInterstitialAd
-                    }
-
-                    override fun onAdFailedToLoad(loadAdError: LoadAdError) {
-                        // Handle ad loading failure
-                    }
-                })
+                        override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                            mInterstitialAd = interstitialAd
+                        }
+                    })
+            }
         }
 
         fun isLoaded(): Boolean {
-            return ::interstitialAd.isInitialized
+            return mInterstitialAd != null
         }
 
         fun showInterstitialAd(context: Activity) { // Requires activity context
             if (isLoaded()) {
-                interstitialAd.show(context)
-                interstitialAd.fullScreenContentCallback = object : FullScreenContentCallback() {
+
+                mInterstitialAd?.show(context)
+
+
+                mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
                     override fun onAdDismissedFullScreenContent() {
+                        // Called when ad is dismissed.
+                        mInterstitialAd = null
+
                         CountTimer.startTimer(
                             SET_TIMEOUT_ADS_ON_AFTER,
                             listener = object : CountTimer.FinishedCount {
@@ -86,8 +99,9 @@ class AdMobHelper {
                             })
                     }
 
-                    override fun onAdFailedToShowFullScreenContent(error: AdError) {
-                        // Called when the ad fails to show
+                    override fun onAdFailedToShowFullScreenContent(adError: AdError) {
+                        super.onAdFailedToShowFullScreenContent(adError)
+                        mInterstitialAd = null
                     }
                 }
             }
