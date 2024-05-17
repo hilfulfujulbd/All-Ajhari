@@ -21,8 +21,8 @@ object NavigationActions {
     fun shareApp(context: Context) {
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.type = "text/plain"
-        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Reflections From Surah Yusuf App contact")
-        val shareMessage = "https://play.google.com/store/apps/details?id=com.toufikhasan.allajhari"
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "All Ajhari App contact")
+        val shareMessage = "https://play.google.com/store/apps/details?id=org.hilfulfujul.allajhari"
         shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
         context.startActivity(Intent.createChooser(shareIntent, "ShareVia"))
     }
